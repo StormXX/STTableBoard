@@ -1,8 +1,9 @@
 # STTableBoard
-☃️ A TableBoard that row can be moved everywhere just like Trello
+☃️ A TableBoard that row can be moved everywhere just like Trello (for iPhone and iPad)
+[Teambition](https://itunes.apple.com/cn/app/teambition/id656664814?l=en&mt=8) is using the STTableBoard.
 
 ### GIF
-![image](https://raw.githubusercontent.com/StormXX/STTableBoard/master/GIF/STTableBoard)
+![image](https://raw.githubusercontent.com/StormXX/STTableBoard/master/GIF/STTableBoard.gif)
 
 ## Usage
 1. Init a STTableBoard with `let table = STTableBoard(localizedStrings: yourLocalizedString)` 
