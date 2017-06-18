@@ -54,8 +54,8 @@ class ViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         super.viewDidLoad()
         self.title = "Teambition"
-        setupContianerView()
-        setupExitFullScreenView()
+//        setupContianerView()
+//        setupExitFullScreenView()
         configureTableBoard()
         layoutView()
         addAddButton()
@@ -70,8 +70,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        let f = tableBoard.boardFooterRect(at: 0)
-//        print("viewDidAppear \(f)")
     }
     
     func addAddButton() {
@@ -140,11 +138,7 @@ extension ViewController {
         ]
         
         titleArray = ["七里香11111111111111111", "星晴", "彩虹", "aa", "bb"]
-        
-        //        tableBoard.contentInset = UIEdgeInsets(top: 64.0, left: 0, bottom: 0, right: 0)
-        //        tableBoard.sizeOffset = CGSize(width: 0.0, height: 64)
-        //        view.frame.size.height -= 64.0
-        //        tableBoard.view.frame.size = view.frame.size
+
         tableBoard.registerClasses([(BoardCardCell.self,"DefaultCell")])
         tableBoard.delegate = self
         tableBoard.dataSource = self
@@ -180,7 +174,7 @@ extension ViewController {
         tableBoard.view.translatesAutoresizingMaskIntoConstraints = false
         let views = ["tableBoard": tableBoard.view]
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[tableBoard]|", options: [], metrics: nil, views: views)
-        let top = NSLayoutConstraint(item: tableBoard.view, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .bottom, multiplier: 1, constant: 0)
+        let top = NSLayoutConstraint(item: tableBoard.view, attribute: .top, relatedBy: .equal, toItem: topLayoutGuide, attribute: .bottom, multiplier: 1, constant: 0)
         let bottom = NSLayoutConstraint(item: tableBoard.view, attribute: .bottom, relatedBy: .equal, toItem: bottomLayoutGuide, attribute: .top, multiplier: 1, constant: 0)
         NSLayoutConstraint.activate(horizontalConstraints + [top, bottom])
     }

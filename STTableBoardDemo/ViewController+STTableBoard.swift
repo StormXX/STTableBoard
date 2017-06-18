@@ -52,7 +52,7 @@ extension ViewController: STTableBoardDelegate {
             guard let _ = navigationController, !isAnimatingForFullScreen else {
                 break
             }
-            animateTopBar(with: recognizer.velocity)
+//            animateTopBar(with: recognizer.velocity)
         default:
             break
         }
